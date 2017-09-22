@@ -1,7 +1,7 @@
 /*
  * Definición de Disco
  */
-package discosdam;
+package discosDam;
 
 /**
  *
@@ -57,4 +57,11 @@ public class Disco {
         this.titulo = titulo;
     }
 
+    @Override
+    public String toString() {
+        return "Disco{" + "titulo=" + titulo + ", artista=" + artista + ", canciones=" + canciones + ", duracion=" + duracion + '}';
+    }
+
+    
+    
 }

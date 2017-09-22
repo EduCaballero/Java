@@ -27,12 +27,15 @@ public class DiscosDAM {
         opcion = pedirEntero("Escoge una opción: ");
         switch (opcion) {
             case 1: //Alta disco
+                altaDisco();
                 break;
             case 2: // Modificar disco
+                modificarTemasDisco();
                 break;
             case 3: //Borrar disco
                 break;
             case 4: //Listas discos
+                mostrarDiscos();
                 break;
             case 5: // Salir
                 System.out.println("Hasta la próxima");
@@ -41,6 +44,31 @@ public class DiscosDAM {
                 System.out.println("Opción incorrecta");
         }
         } while (opcion !=5);
+    }
+    
+    public static void modificarTemasDisco(){
+        mostrarDiscos();
+        int elegido = pedirEntero("Indica el nº de disco a modificar");
+        //restamos uno al nº indicado por el usuario
+        elegido--;
+        //Accedemos al disco escogido
+        Disco d = discos.get(elegido);
+        int temas = pedirEntero("Nuevo dato - nº de temas: ");
+        d.setCanciones(temas);
+        System.out.println("Disco modificado");
+    }
+    
+    public static void mostrarDiscos() {
+        System.out.println("******* TUS DISCOS *******");
+        //int contador = 1; utilizamos el index of en lugar de contador y luego contador++
+        for (Disco d : discos) {
+            System.out.println((discos.indexOf(d)+1) + ": " + d);
+            //contador ++;
+        }
+        /* for (int i = 0; i < discos.size(); i++) {
+        Disco d = discos.get(i);
+        System.out.println(); //Esto e slo mismo que lo de arriba        
+        */
     }
     
     public static void altaDisco(){
