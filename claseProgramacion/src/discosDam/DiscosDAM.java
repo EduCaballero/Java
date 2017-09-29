@@ -129,6 +129,7 @@ public class DiscosDAM {
         System.out.println(mensaje);
         try {
             numero = Integer.parseInt(br.readLine());
+            error = false;
         } catch (IOException ex) {
             System.out.println("Error de entrada salidad "+ ex.getMessage());
         } catch (NumberFormatException ex) {

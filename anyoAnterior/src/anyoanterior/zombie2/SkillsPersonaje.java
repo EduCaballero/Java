@@ -1,0 +1,8 @@
+//TIPOS DE SKILLS PARA LOS SUP
+public enum SkillsPersonaje {
+    RAPIDO,
+    BUSCADOR,
+    FORTACHON,
+    ESCURRIDIZO,
+    AMBIDIESTRO
+}
